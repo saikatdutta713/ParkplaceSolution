@@ -1,0 +1,96 @@
+:root {
+
+    --sidebarwidth :250px;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.unselectable  {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+.sidebar {
+    width: var(--sidebarwidth);
+    height: 100%;
+    background-color: #027580;
+    color: white;
+    font-weight: 400;
+    transition: 0.5s all ease-in-out;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-brand {
+    /* font-size: 18px; */
+    font-weight: 700;
+}
+
+.sidebar-content {
+    padding: 1rem 1rem;
+}
+
+.side-item {
+    min-width:250px;
+    cursor: pointer;
+    padding: 1.5rem 1rem;
+    font-size: 1.7rem;
+}
+
+.sidebar .side-item:hover {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.notification-count {
+    height: 25px;
+    min-width: 25px;
+    max-width: 40px;
+    border-radius: 30px;
+    margin-left: 2rem;
+    margin-top: 4px;
+    padding: 0 5px;
+    background-color: red;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main-content {
+    height: 100%;
+    width: calc(100% - var(--sidebarwidth));
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f1f5f9;
+    transition: 0.5s all ease-in-out;
+}
+
+.sidebar-toggle i {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sidebar-toggle i:hover {
+    border: 3px solid #9f9f9f;
+}
